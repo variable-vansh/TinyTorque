@@ -49,10 +49,9 @@ Share this file (and your draft) with any LLM. Ask it to **output one complete H
 
 Do **not** add author line, tags, comments, related posts, or newsletter blocks.
 
-- **Footer:** `<footer class="post-footer">` with:
+- **Footer:** `<footer class="post-footer">` with only:
   - `<time class="post-date" datetime="YYYY-MM-DD">D Month YYYY</time>` — e.g. `datetime="2026-04-11"` and visible `11 April 2026`.
-  - `<hr />`
-  - Link to index: `<a href="../index.html" class="footer-brand">` with small logo `width="22" height="22"`, text `Tiny Torque`, then `<span class="arrow" aria-hidden="true">↗</span>`.
+  - A single home link: `<a href="../index.html" class="footer-home-logo" aria-label="Tiny Torque home">` containing only `<img src="../logo.png" alt="" width="32" height="32" />` — styled as a clickable logo in a white circle (CSS). No horizontal rule, no title text, no arrow.
 
 - **End of file:** `<script src="../script.js"></script>` before `</body>`.
 
@@ -127,11 +126,8 @@ Tell the human: **insert this `<li>` as the first item** inside `<ul class="post
 
       <footer class="post-footer">
         <time class="post-date" datetime="YYYY-MM-DD">D Month YYYY</time>
-        <hr />
-        <a href="../index.html" class="footer-brand">
-          <img src="../logo.png" alt="" width="22" height="22" />
-          Tiny Torque
-          <span class="arrow" aria-hidden="true">↗</span>
+        <a href="../index.html" class="footer-home-logo" aria-label="Tiny Torque home">
+          <img src="../logo.png" alt="" width="32" height="32" />
         </a>
       </footer>
     </article>
